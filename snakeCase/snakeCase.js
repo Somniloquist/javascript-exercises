@@ -1,8 +1,9 @@
 const snakeCase = function(str) {
-    if (isCamelCase(str)) {
+    if (isWTFCase(str)) {
+        return str.toLowerCase().replace(/\b\.{2}\b/g, '_');
+    } else if (isCamelCase(str)) {
         return camelToSnake(str);
     }
-
         return str.toLowerCase().replace(/[\s]/g, '_')
                                 .replace(/[^\-^\w]/g, '')
                                 .replace(/\-/g, '_');
