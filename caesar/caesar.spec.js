@@ -4,6 +4,12 @@ describe('caesar', function() {
   it('works with single letters', function() {
     expect(caesar('A', 1)).toEqual('B');
   });
+  it('works with single letters, with large shift', function() {
+    expect(caesar('A', 260000001)).toEqual('B');
+  });
+  it('works with single letters, negative shift', function() {
+    expect(caesar('b', -27)).toEqual('a');
+  });
   xit('works with words', function() {
     expect(caesar('Aaa', 1)).toEqual('Bbb');
   });
