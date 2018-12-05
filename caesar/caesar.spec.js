@@ -10,7 +10,7 @@ describe('caesar', function() {
   it('works with single letters, negative shift', function() {
     expect(caesar('b', -27)).toEqual('a');
   });
-  xit('works with words', function() {
+  it('works with words', function() {
     expect(caesar('Aaa', 1)).toEqual('Bbb');
   });
   xit('works with phrases', function() {

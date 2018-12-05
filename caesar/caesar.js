@@ -1,5 +1,9 @@
 const caesar = function(str, shift) {
-    return String.fromCharCode(normalizeShift(str, shift));
+    let caesar = [];
+    str.split('').forEach(char => {
+        caesar.push(String.fromCharCode(normalizeShift(char, shift)));
+    });
+    return caesar.join('');
 }
 
 const normalizeShift = function(str, shift) {
