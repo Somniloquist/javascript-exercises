@@ -23,7 +23,7 @@ describe('#translate', function() {
 		expect(s).toEqual('appleay');
 	});
 
-	xit('translates a word beginning with a consonant', function() {
+	it('translates a word beginning with a consonant', function() {
 		s = pigLatin.translate("banana");
 		expect(s).toEqual("ananabay");
 	});
