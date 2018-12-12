@@ -28,12 +28,12 @@ describe('#translate', function() {
 		expect(s).toEqual("ananabay");
 	});
 
-	xit('translates a word beginning with two consonants', function() {
+	it('translates a word beginning with two consonants', function() {
 		s = pigLatin.translate("cherry");
 		expect(s).toEqual('errychay');
 	});
 
-	xit('translates two words', function() {
+	it('translates two words', function() {
 		s = pigLatin.translate("eat pie");
 		expect(s).toEqual('eatay iepay');
 	});
