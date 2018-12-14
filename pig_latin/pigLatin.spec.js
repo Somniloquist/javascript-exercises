@@ -38,16 +38,16 @@ describe('#translate', function() {
 		expect(s).toEqual('eatay iepay');
 	});
 
-	xit('translates a word beginning with three consonants', function() {
+	it('translates a word beginning with three consonants', function() {
 		expect(pigLatin.translate("three")).toEqual("eethray");
 	});
 
-	xit('counts "sch" as a single phoneme', function() {
+	it('counts "sch" as a single phoneme', function() {
 		s = pigLatin.translate("school");
 		expect(s).toEqual("oolschay");
 	});
 
-	xit('counts "qu" as a single phoneme', function() {
+	it('counts "qu" as a single phoneme', function() {
 		s = pigLatin.translate("quiet");
 		expect(s).toEqual("ietquay");
 	});
