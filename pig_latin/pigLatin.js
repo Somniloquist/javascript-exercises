@@ -1,17 +1,25 @@
 function translate(str) {
 	const words = str.split(' ');
-	const vowels = ['a', 'e', 'i', 'o', 'u'];
 	let translated = [];
 
 	words.forEach(word => {
 		let temp = word.split('');
 		// starts with a vowel
-		if (vowels.includes(word[0])) {
+		if (!isConsonant(word, 1)) {
 			temp.push('ay');
 		// starts with 3 consonants
+		} else if (word[0] === 'q' && word[1] === 'u') {
+			temp.push(word[0] + word[1] + 'ay');
+			temp.shift();
+			temp.shift();
+		} else if (word[1] === 'q' && word[2] === 'u') {
+			temp.push(word[0] + word[1] + word[2]+ 'ay');
+			temp.shift();
+			temp.shift();
+			temp.shift();
 		} else if (isConsonant(word, 3)) {
 			temp.push(word[0] + word[1] + word[2] + 'ay');
-			temp.shift();
+			temp.shift()
 			temp.shift();
 			temp.shift();
 		// starts with 2 consonants

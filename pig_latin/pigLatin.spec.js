@@ -52,12 +52,12 @@ describe('#translate', function() {
 		expect(s).toEqual("ietquay");
 	});
 
-	xit('counts "qu" as a consonant even when its preceded by a consonant', function() {
+	it('counts "qu" as a consonant even when its preceded by a consonant', function() {
 		s = pigLatin.translate("square");
 		expect(s).toEqual("aresquay");
 	});
 
-	xit('translates many words', function() {
+	it('translates many words', function() {
 		s = pigLatin.translate("the quick brown fox");
 		expect(s).toEqual("ethay ickquay ownbray oxfay");
 	});
